@@ -31,12 +31,17 @@ export default function Header() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          <a href="#" className="flex items-center gap-2">
-            <span className="text-3xl font-bold tracking-tight">
+          <a href="#" className="flex items-baseline gap-2">
+            <span className="text-4xl font-bold tracking-tight leading-none">
               <span className="text-black">Sm</span>
-              <span className="brand-text-gradient font-[var(--font-display)]">uffy&apos;s</span>
+              <span
+                className="brand-text-gradient"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                uffy&apos;s
+              </span>
             </span>
-            <span className="text-xs uppercase tracking-widest text-zinc-500 hidden sm:block">
+            <span className="text-xs uppercase tracking-[0.25em] text-zinc-500 hidden sm:block font-semibold">
               Pub
             </span>
           </a>
