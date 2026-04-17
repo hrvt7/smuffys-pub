@@ -21,7 +21,7 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
         desc: "Dupla smash pogácsa, cheddar, saláta, paradicsom, lilahagyma, Smuffy's szósz",
         emoji: "🍔",
         badge: "Kedvenc",
-        image: "/menu/classic-smuffy.jpg",
+        image: "/menu/burger.jpg",
       },
       {
         name: "Bacon Blast",
