@@ -123,7 +123,7 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
       { name: "Choco Shake", desc: "Belga csoki, vaníliafagyi, tej", emoji: "🍫", image: "/menu/choco-shake.jpg" },
       { name: "Limonádé", desc: "Házi limonádé — klasszikus / eperes / málnás", emoji: "🍋", image: "/menu/limonade.jpg" },
       { name: "Csapolt sör", desc: "Hideg magyar csapolt sör, 0.3 / 0.5L", emoji: "🍺", image: "/menu/csapolt-sor.jpg" },
-      { name: "Kávé & tea", desc: "Espresso, cappuccino, latte, tea válogatás", emoji: "☕" },
+      { name: "Kávé & tea", desc: "Espresso, cappuccino, latte, tea válogatás", emoji: "☕", image: "/menu/tea.jpg" },
     ],
   },
 ];
