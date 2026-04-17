@@ -27,27 +27,32 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
         name: "Bacon Blast",
         desc: "Dupla smash, dupla cheddar, ropogós bacon, karamellizált hagyma, BBQ",
         emoji: "🥓",
+        image: "/menu/burger.jpg",
       },
       {
         name: "Spicy Fire",
         desc: "Smash pogácsa, pepperoni, jalapeño, chipotle mayo, csípős cheddar",
         emoji: "🌶️",
         badge: "Csípős",
+        image: "/menu/burger.jpg",
       },
       {
         name: "Mushroom Swiss",
         desc: "Smash pogácsa, pirított gomba, ementáli, truffle mayo",
         emoji: "🍄",
+        image: "/menu/burger.jpg",
       },
       {
         name: "Chicken Crunch",
         desc: "Rántott csirkemell, savanyú uborka, coleslaw, honey-mustard",
         emoji: "🍗",
+        image: "/menu/burger.jpg",
       },
       {
         name: "Veggie Smash",
         desc: "Házi zöldségburger, grillezett padlizsán, hummusz, rukkola",
         emoji: "🥗",
+        image: "/menu/burger.jpg",
       },
     ],
   },
@@ -61,32 +66,37 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
         desc: "Friss málna, eper, áfonya, tejszínhab, vaníliaöntet",
         emoji: "🍓",
         badge: "Szezon",
-        video: "/menu/smuffy-palacsinta.mp4",
+        image: "/menu/fluffy-pancake.jpg",
       },
       {
         name: "Choco Dream",
         desc: "Belga csokiszósz, brownie darabok, tejszínhab, M&M's",
         emoji: "🍫",
+        image: "/menu/fluffy-pancake.jpg",
       },
       {
         name: "Nutella Bomb",
         desc: "Nutella, banán, mogyoró, karamell, tejszínhab",
         emoji: "🍌",
+        image: "/menu/fluffy-pancake.jpg",
       },
       {
         name: "Oreo Fluffy",
         desc: "Oreo darabok, csokiszósz, vaníliafagyi, tejszínhab",
         emoji: "🍪",
+        image: "/menu/fluffy-pancake.jpg",
       },
       {
         name: "Classic Butter",
         desc: "Olvasztott vaj, juharszirup, porcukor",
         emoji: "🧈",
+        image: "/menu/fluffy-pancake.jpg",
       },
       {
         name: "Tiramisu Twist",
         desc: "Mascarpone krém, kávéöntet, kakaópor, piskóta",
         emoji: "☕",
+        image: "/menu/fluffy-pancake.jpg",
       },
     ],
   },
@@ -147,7 +157,53 @@ export default function Menu() {
                 <div className="mt-4 h-1 w-20 brand-gradient rounded-full" />
               </div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="sm:hidden -mx-4 px-4 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                {cat.items.map((item) => (
+                  <article
+                    key={item.name + "-m"}
+                    className={`group relative bg-white rounded-3xl border border-zinc-100 shadow-sm transition-all overflow-hidden shrink-0 w-[75vw] max-w-[320px] snap-start ${
+                      item.video || item.image ? "" : "p-6"
+                    }`}
+                  >
+                    {item.badge && (
+                      <div className="absolute top-3 right-3 z-10 brand-gradient text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md flex items-center gap-1">
+                        <Star className="w-3 h-3 fill-white" />
+                        {item.badge}
+                      </div>
+                    )}
+                    {item.image ? (
+                      <>
+                        <div className="relative w-full aspect-[4/5] bg-white overflow-hidden">
+                          <img src={item.image} alt={item.name} className="absolute inset-0 w-full h-full object-cover" />
+                        </div>
+                        <div className="p-5">
+                          <h4 className="text-lg font-bold text-black mb-1.5">{item.name}</h4>
+                          <p className="text-sm text-zinc-600 leading-relaxed">{item.desc}</p>
+                        </div>
+                      </>
+                    ) : item.video ? (
+                      <>
+                        <div className="relative w-full aspect-video bg-white">
+                          <video src={item.video} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
+                        </div>
+                        <div className="p-5">
+                          <h4 className="text-lg font-bold text-black mb-1.5">{item.name}</h4>
+                          <p className="text-sm text-zinc-600 leading-relaxed">{item.desc}</p>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="text-5xl mb-4">{item.emoji}</div>
+                        <h4 className="text-lg font-bold text-black mb-1.5">{item.name}</h4>
+                        <p className="text-sm text-zinc-600 leading-relaxed">{item.desc}</p>
+                      </>
+                    )}
+                  </article>
+                ))}
+                <div className="shrink-0 w-1" aria-hidden />
+              </div>
+
+              <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {cat.items.map((item) => (
                   <article
                     key={item.name}

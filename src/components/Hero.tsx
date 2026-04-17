@@ -16,9 +16,12 @@ export default function Hero() {
               Szombathely · Étterem & Pub
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] text-black">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.15] text-black">
               <span className="block">Smash Burger</span>
-              <span className="block brand-text-gradient" style={{ fontFamily: "var(--font-display)" }}>
+              <span
+                className="block brand-text-gradient pb-2"
+                style={{ fontFamily: "var(--font-display)", lineHeight: 1.25 }}
+              >
                 &amp; Fluffy
               </span>
               <span className="block">Palacsinta</span>
