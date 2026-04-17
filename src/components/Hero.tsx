@@ -80,10 +80,10 @@ export default function Hero() {
           </div>
 
           <div className="relative fade-up" style={{ animationDelay: "0.2s" }}>
-            <div className="relative aspect-square max-w-lg mx-auto">
+            <div className="relative aspect-[9/16] max-w-sm mx-auto">
               <div className="absolute inset-0 brand-gradient rounded-[3rem] rotate-6 opacity-20 blur-2xl" />
               <div className="relative bg-white rounded-[3rem] shadow-2xl shadow-pink/20 overflow-hidden border border-pink/10">
-                <div className="relative aspect-square">
+                <div className="relative aspect-[9/16]">
                   <img
                     src="/smuffys-logo.jpg"
                     alt="Smuffy's Pub"
