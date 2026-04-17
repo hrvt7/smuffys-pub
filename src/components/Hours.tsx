@@ -64,7 +64,7 @@ export default function Hours() {
         </div>
 
         <p className="mt-8 text-center text-zinc-400 text-sm">
-          Az ünnepnapi nyitvatartásért hívj minket: <a href="tel:+36300718737" className="text-pink-light font-semibold hover:underline">+36 30 071 8737</a>
+          Az ünnepnapi nyitvatartásért hívj minket: <a href="tel:+36305252336" className="text-pink-light font-semibold hover:underline">+36 30 525 2336</a>
         </p>
       </div>
     </section>

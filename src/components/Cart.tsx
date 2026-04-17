@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ShoppingBag, X, Plus, Minus, Trash2, Check } from "lucide-react";
 import { useCart, formatHUF } from "@/context/CartContext";
 
-const PHONE_RAW = "36300718737";
+const PHONE_RAW = "36305252336";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (

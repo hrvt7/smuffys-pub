@@ -16,7 +16,7 @@ const pacifico = Pacifico({
 export const metadata: Metadata = {
   title: "Smuffy's Pub — Smash Burger & Fluffy Palacsinta | Szombathely",
   description:
-    "Smuffy's Pub Szombathely — igazi smash burgerek és fluffy palacsinták, kézműves hozzávalókból. Rendelj telefonon: +36 30 071 8737",
+    "Smuffy's Pub Szombathely — igazi smash burgerek és fluffy palacsinták, kézműves hozzávalókból. Rendelj telefonon: +36 30 525 2336",
   keywords: [
     "smash burger szombathely",
     "fluffy palacsinta",
@@ -48,7 +48,7 @@ export default function RootLayout({
               name: "Smuffy's Pub",
               description: "Smash burger és fluffy palacsinta étterem Szombathelyen.",
               servesCuisine: ["American", "Burger", "Dessert"],
-              telephone: "+36 30 071 8737",
+              telephone: "+36 30 525 2336",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Szombathely",

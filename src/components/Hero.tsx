@@ -41,7 +41,7 @@ export default function Hero() {
                 Menü megtekintése
               </a>
               <a
-                href="tel:+36300718737"
+                href="tel:+36305252336"
                 className="inline-flex items-center gap-2 bg-black text-white px-7 py-4 rounded-full text-base font-semibold hover:bg-zinc-800 transition-colors"
               >
                 <Phone className="w-5 h-5" />
@@ -56,7 +56,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-pink" />
-                +36 30 071 8737
+                +36 30 525 2336
               </div>
             </div>
           </div>

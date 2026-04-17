@@ -57,11 +57,11 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="tel:+36300718737"
+              href="tel:+36305252336"
               className="inline-flex items-center gap-2 brand-gradient text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-pink/20 hover:shadow-pink/40 transition-shadow"
             >
               <Phone className="w-4 h-4" />
-              +36 30 071 8737
+              +36 30 525 2336
             </a>
           </nav>
 
@@ -88,11 +88,11 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="tel:+36300718737"
+                href="tel:+36305252336"
                 className="mt-2 inline-flex items-center justify-center gap-2 brand-gradient text-white px-5 py-3 rounded-full text-sm font-semibold"
               >
                 <Phone className="w-4 h-4" />
-                +36 30 071 8737
+                +36 30 525 2336
               </a>
             </nav>
           </div>

@@ -38,7 +38,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-8">
           <div className="space-y-4">
             <a
-              href="tel:+36300718737"
+              href="tel:+36305252336"
               className="flex items-start gap-4 bg-white rounded-3xl p-6 border border-zinc-100 hover:border-pink/30 hover:shadow-lg transition-all"
             >
               <div className="w-12 h-12 rounded-2xl brand-gradient flex items-center justify-center shrink-0 shadow-lg shadow-pink/20">
@@ -49,7 +49,7 @@ export default function Contact() {
                   Telefon
                 </div>
                 <div className="text-2xl font-bold text-black mt-1">
-                  +36 30 071 8737
+                  +36 30 525 2336
                 </div>
                 <div className="text-sm text-zinc-600 mt-1">
                   Foglalás, rendelés, kérdések
