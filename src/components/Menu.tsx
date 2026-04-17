@@ -118,7 +118,7 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
     title: "Italok & Shake-ek",
     subtitle: "Krémes shake-ek, üdítők és hideg csapolt sörök",
     items: [
-      { name: "Oreo Shake", desc: "Vaníliafagyi, tej, Oreo, tejszínhab", emoji: "🥤", badge: "Must-try" },
+      { name: "Oreo Shake", desc: "Vaníliafagyi, tej, Oreo, tejszínhab", emoji: "🥤", badge: "Must-try", image: "/menu/oreo-shake.jpg" },
       { name: "Strawberry Shake", desc: "Eper, vaníliafagyi, tej", emoji: "🍓" },
       { name: "Choco Shake", desc: "Belga csoki, vaníliafagyi, tej", emoji: "🍫" },
       { name: "Limonádé", desc: "Házi limonádé — klasszikus / eperes / málnás", emoji: "🍋" },
