@@ -7,6 +7,7 @@ type Item = {
   badge?: string;
   emoji: string;
   video?: string;
+  image?: string;
 };
 
 const categories: { id: string; title: string; subtitle: string; items: Item[] }[] = [
@@ -20,7 +21,7 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
         desc: "Dupla smash pogácsa, cheddar, saláta, paradicsom, lilahagyma, Smuffy's szósz",
         emoji: "🍔",
         badge: "Kedvenc",
-        video: "/menu/smuffy-burger.mp4",
+        image: "/menu/classic-smuffy.jpg",
       },
       {
         name: "Bacon Blast",
@@ -151,7 +152,7 @@ export default function Menu() {
                   <article
                     key={item.name}
                     className={`group relative bg-white rounded-3xl border border-zinc-100 hover:border-pink/30 hover:shadow-xl hover:shadow-pink/10 transition-all overflow-hidden ${
-                      item.video ? "" : "p-6"
+                      item.video || item.image ? "" : "p-6"
                     }`}
                   >
                     {item.badge && (
@@ -161,7 +162,25 @@ export default function Menu() {
                       </div>
                     )}
 
-                    {item.video ? (
+                    {item.image ? (
+                      <>
+                        <div className="relative w-full aspect-[4/5] bg-white overflow-hidden">
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div className="p-6">
+                          <h4 className="text-xl font-bold text-black mb-2">
+                            {item.name}
+                          </h4>
+                          <p className="text-sm text-zinc-600 leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </>
+                    ) : item.video ? (
                       <>
                         <div className="relative w-full aspect-video bg-white">
                           <video
