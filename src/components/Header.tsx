@@ -15,18 +15,20 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const transparent = !scrolled && !open;
+
   return (
     <header
-      className={`sticky top-0 z-50 transition-all ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm"
-          : "bg-white/80 backdrop-blur-sm"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        transparent
+          ? "bg-transparent"
+          : "bg-white/95 backdrop-blur-md shadow-sm"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -35,10 +37,12 @@ export default function Header() {
             <img
               src="/smuffys-logo.jpg"
               alt="Smuffy's Pub logo"
-              className="w-11 h-11 rounded-full object-cover border-2 border-pink/30 shadow-md"
+              className="w-11 h-11 rounded-full object-cover border-2 border-white/60 shadow-md"
             />
             <span className="text-3xl sm:text-4xl font-bold tracking-tight leading-none">
-              <span className="text-black">Sm</span>
+              <span className={transparent ? "text-white drop-shadow-md" : "text-black"}>
+                Sm
+              </span>
               <span
                 className="brand-text-gradient"
                 style={{ fontFamily: "var(--font-display)" }}
@@ -46,7 +50,11 @@ export default function Header() {
                 uffy&apos;s
               </span>
             </span>
-            <span className="text-xs uppercase tracking-[0.25em] text-zinc-500 hidden sm:block font-semibold">
+            <span
+              className={`text-xs uppercase tracking-[0.25em] hidden sm:block font-semibold transition-colors ${
+                transparent ? "text-white/80" : "text-zinc-500"
+              }`}
+            >
               Pub
             </span>
           </a>
@@ -56,7 +64,11 @@ export default function Header() {
               <a
                 key={n.href}
                 href={n.href}
-                className="text-sm font-medium text-zinc-700 hover:text-pink transition-colors"
+                className={`text-sm font-medium transition-colors ${
+                  transparent
+                    ? "text-white/90 hover:text-white drop-shadow"
+                    : "text-zinc-700 hover:text-pink"
+                }`}
               >
                 {n.label}
               </a>
@@ -72,7 +84,9 @@ export default function Header() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-2 text-black"
+            className={`md:hidden p-2 transition-colors ${
+              transparent ? "text-white" : "text-black"
+            }`}
             aria-label="Menü"
           >
             {open ? <X className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
