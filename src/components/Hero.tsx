@@ -10,7 +10,7 @@ export default function Hero() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="fade-up">
+          <div className="fade-up text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink/10 text-pink-dark text-xs font-semibold uppercase tracking-wider mb-6">
               <span className="w-2 h-2 rounded-full bg-pink animate-pulse" />
               Szombathely · Étterem & Pub
@@ -27,13 +27,13 @@ export default function Hero() {
               <span className="block">Palacsinta</span>
             </h1>
 
-            <p className="mt-6 text-lg text-zinc-600 max-w-xl leading-relaxed">
+            <p className="mt-6 text-lg text-zinc-600 max-w-xl leading-relaxed mx-auto lg:mx-0">
               Ropogós szélű smash burgerek, felhőpuha fluffy palacsinták,
               kézműves hozzávalókból. Szombathely új kedvenc helye — gyere be,
               vagy rendelj telefonon.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
               <a
                 href="#menu"
                 className="inline-flex items-center gap-2 brand-gradient text-white px-7 py-4 rounded-full text-base font-semibold shadow-xl shadow-pink/30 hover:shadow-pink/50 hover:scale-105 transition-all"
@@ -49,7 +49,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-10 flex items-center gap-6 text-sm text-zinc-500">
+            <div className="mt-10 flex items-center gap-6 text-sm text-zinc-500 justify-center lg:justify-start">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-pink" />
                 Szombathely
