@@ -121,7 +121,7 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
       { name: "Oreo Shake", desc: "Vaníliafagyi, tej, Oreo, tejszínhab", emoji: "🥤", badge: "Must-try", image: "/menu/oreo-shake.jpg" },
       { name: "Strawberry Shake", desc: "Eper, vaníliafagyi, tej", emoji: "🍓", image: "/menu/eper-shake.jpg" },
       { name: "Choco Shake", desc: "Belga csoki, vaníliafagyi, tej", emoji: "🍫", image: "/menu/choco-shake.jpg" },
-      { name: "Limonádé", desc: "Házi limonádé — klasszikus / eperes / málnás", emoji: "🍋" },
+      { name: "Limonádé", desc: "Házi limonádé — klasszikus / eperes / málnás", emoji: "🍋", image: "/menu/limonade.jpg" },
       { name: "Csapolt sör", desc: "Hideg magyar csapolt sör, 0.3 / 0.5L", emoji: "🍺" },
       { name: "Kávé & tea", desc: "Espresso, cappuccino, latte, tea válogatás", emoji: "☕" },
     ],
