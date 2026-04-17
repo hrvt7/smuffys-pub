@@ -31,8 +31,13 @@ export default function Header() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          <a href="#" className="flex items-baseline gap-2">
-            <span className="text-4xl font-bold tracking-tight leading-none">
+          <a href="#" className="flex items-center gap-3">
+            <img
+              src="/smuffys-logo.jpg"
+              alt="Smuffy's Pub logo"
+              className="w-11 h-11 rounded-full object-cover border-2 border-pink/30 shadow-md"
+            />
+            <span className="text-3xl sm:text-4xl font-bold tracking-tight leading-none">
               <span className="text-black">Sm</span>
               <span
                 className="brand-text-gradient"

@@ -2,21 +2,30 @@ import { Phone, MapPin } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-pink-50/30 to-white">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 -left-20 w-96 h-96 bg-pink/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-pink-light/10 rounded-full blur-3xl" />
+    <section className="relative overflow-hidden bg-black">
+      <div className="absolute inset-0 -z-0">
+        <video
+          src="/hero-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/hero-burger.jpg"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="fade-up text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink/10 text-pink-dark text-xs font-semibold uppercase tracking-wider mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-wider mb-6 border border-white/20">
               <span className="w-2 h-2 rounded-full bg-pink animate-pulse" />
               Szombathely · Étterem & Pub
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.15] text-black">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.15] text-white drop-shadow-xl">
               <span className="block">Smash Burger</span>
               <span
                 className="block brand-text-gradient pb-2"
@@ -27,7 +36,7 @@ export default function Hero() {
               <span className="block">Palacsinta</span>
             </h1>
 
-            <p className="mt-6 text-lg text-zinc-600 max-w-xl leading-relaxed mx-auto lg:mx-0">
+            <p className="mt-6 text-lg text-zinc-100 max-w-xl leading-relaxed mx-auto lg:mx-0 drop-shadow-md">
               Ropogós szélű smash burgerek, felhőpuha fluffy palacsinták,
               kézműves hozzávalókból. Szombathely új kedvenc helye — gyere be,
               vagy rendelj telefonon.
@@ -49,7 +58,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-10 flex items-center gap-6 text-sm text-zinc-500 justify-center lg:justify-start">
+            <div className="mt-10 flex items-center gap-6 text-sm text-zinc-200 justify-center lg:justify-start">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-pink" />
                 Szombathely
@@ -67,8 +76,8 @@ export default function Hero() {
               <div className="relative bg-white rounded-[3rem] shadow-2xl shadow-pink/20 overflow-hidden border border-pink/10">
                 <div className="relative aspect-square">
                   <img
-                    src="/hero-burger.jpg"
-                    alt="Smuffy's Pub smash burger"
+                    src="/smuffys-logo.jpg"
+                    alt="Smuffy's Pub"
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>
