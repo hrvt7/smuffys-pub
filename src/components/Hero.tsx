@@ -61,11 +61,16 @@ export default function Hero() {
           <div className="relative fade-up" style={{ animationDelay: "0.2s" }}>
             <div className="relative aspect-square max-w-lg mx-auto">
               <div className="absolute inset-0 brand-gradient rounded-[3rem] rotate-6 opacity-20 blur-2xl" />
-              <div className="relative bg-white rounded-[3rem] shadow-2xl shadow-pink/20 p-12 flex items-center justify-center border border-pink/10">
-                <div className="text-center">
-                  <div className="text-[8rem] leading-none mb-4">🍔</div>
-                  <div className="text-[6rem] leading-none">🥞</div>
-                  <div className="mt-6 text-2xl font-bold tracking-tight">
+              <div className="relative bg-white rounded-[3rem] shadow-2xl shadow-pink/20 overflow-hidden border border-pink/10">
+                <div className="relative aspect-square">
+                  <img
+                    src="/hero-burger.jpg"
+                    alt="Smuffy's Pub smash burger"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 text-center py-4 bg-gradient-to-t from-white via-white/95 to-transparent">
+                  <div className="text-2xl font-bold tracking-tight">
                     <span className="text-black">Sm</span>
                     <span className="brand-text-gradient" style={{ fontFamily: "var(--font-display)" }}>
                       uffy&apos;s
