@@ -6,6 +6,7 @@ type Item = {
   price?: string;
   badge?: string;
   emoji: string;
+  video?: string;
 };
 
 const categories: { id: string; title: string; subtitle: string; items: Item[] }[] = [
@@ -19,6 +20,7 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
         desc: "Dupla smash pogácsa, cheddar, saláta, paradicsom, lilahagyma, Smuffy's szósz",
         emoji: "🍔",
         badge: "Kedvenc",
+        video: "/menu/smuffy-burger.mp4",
       },
       {
         name: "Bacon Blast",
@@ -58,6 +60,7 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
         desc: "Friss málna, eper, áfonya, tejszínhab, vaníliaöntet",
         emoji: "🍓",
         badge: "Szezon",
+        video: "/menu/smuffy-palacsinta.mp4",
       },
       {
         name: "Choco Dream",
@@ -147,23 +150,51 @@ export default function Menu() {
                 {cat.items.map((item) => (
                   <article
                     key={item.name}
-                    className="group relative bg-white rounded-3xl p-6 border border-zinc-100 hover:border-pink/30 hover:shadow-xl hover:shadow-pink/10 transition-all"
+                    className={`group relative bg-white rounded-3xl border border-zinc-100 hover:border-pink/30 hover:shadow-xl hover:shadow-pink/10 transition-all overflow-hidden ${
+                      item.video ? "" : "p-6"
+                    }`}
                   >
                     {item.badge && (
-                      <div className="absolute -top-3 right-6 brand-gradient text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md flex items-center gap-1">
+                      <div className="absolute top-3 right-3 z-10 brand-gradient text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md flex items-center gap-1">
                         <Star className="w-3 h-3 fill-white" />
                         {item.badge}
                       </div>
                     )}
-                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
-                      {item.emoji}
-                    </div>
-                    <h4 className="text-xl font-bold text-black mb-2">
-                      {item.name}
-                    </h4>
-                    <p className="text-sm text-zinc-600 leading-relaxed">
-                      {item.desc}
-                    </p>
+
+                    {item.video ? (
+                      <>
+                        <div className="relative w-full aspect-video bg-white">
+                          <video
+                            src={item.video}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="absolute inset-0 w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="p-6">
+                          <h4 className="text-xl font-bold text-black mb-2">
+                            {item.name}
+                          </h4>
+                          <p className="text-sm text-zinc-600 leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+                          {item.emoji}
+                        </div>
+                        <h4 className="text-xl font-bold text-black mb-2">
+                          {item.name}
+                        </h4>
+                        <p className="text-sm text-zinc-600 leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </>
+                    )}
                   </article>
                 ))}
               </div>
