@@ -109,7 +109,7 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
       { name: "Classic Fries", desc: "Frissen sütött steak cut burgonya", emoji: "🥔", image: "/menu/krumpli.jpg" },
       { name: "Onion Rings", desc: "Ropogós bundázott hagymakarikák", emoji: "🧅", image: "/menu/hagyma-karika.jpg" },
       { name: "Mozzarella Sticks", desc: "Olvadós mozzarella rudak, marinara szósz", emoji: "🧀" },
-      { name: "Chicken Wings", desc: "6 db szárny — BBQ, buffalo vagy honey-mustard", emoji: "🍗" },
+      { name: "Chicken Wings", desc: "6 db szárny — BBQ, buffalo vagy honey-mustard", emoji: "🍗", image: "/menu/chicken-wings.jpg" },
       { name: "Nachos Loaded", desc: "Ropogós nachos, cheddar, guacamole, salsa, sour cream", emoji: "🌽" },
     ],
   },
