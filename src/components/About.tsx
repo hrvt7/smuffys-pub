@@ -1,21 +1,21 @@
 const features = [
   {
-    video: "/about/premium-alapanyagok.mp4",
+    image: "/menu/burger.jpg",
     title: "Prémium alapanyagok",
     desc: "Minden hozzávalót gondosan válogatunk — friss marhahús, kézműves bun, valódi cheddar. Nálunk nincs kompromisszum a minőségben.",
   },
   {
-    video: "/about/olasz-alapanyag.mp4",
+    image: "/menu/mozzarella-sticks.jpg",
     title: "Olasz inspiráció",
     desc: "Eredeti olasz alapanyagok építik fel az ízvilágot — parmezán, mozzarella, olívaolaj, friss bazsalikom. A hagyomány találkozik az amerikai klasszikussal.",
   },
   {
-    video: "/about/fatuzeles.mp4",
+    image: "/menu/krumpli.jpg",
     title: "Fatüzelésű sütés",
     desc: "A burgert valódi fatüzelésű grillen készítjük — ez adja azt a füstös, mély ízt, amit sehol máshol nem kapsz meg. Ez különböztet meg minket.",
   },
   {
-    video: "/about/gyors-kiszallitas.mp4",
+    image: "/menu/oreo-shake.jpg",
     title: "Gyors kiszállítás",
     desc: "Rendelj telefonon vagy WhatsAppon — pár perc alatt elkészül, pár percen belül az asztalodnál lesz. Friss, forró, úgy ahogy kell.",
   },
@@ -59,13 +59,10 @@ export default function About() {
                 className="group bg-gradient-to-br from-white to-pink-50/40 border border-zinc-100 rounded-3xl overflow-hidden hover:border-pink/30 hover:shadow-xl hover:shadow-pink/10 transition-all"
               >
                 <div className="relative aspect-square overflow-hidden bg-black">
-                  <video
-                    src={f.video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute inset-0 w-full h-full object-cover"
+                  <img
+                    src={f.image}
+                    alt={f.title}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-5">
