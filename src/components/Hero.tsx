@@ -85,7 +85,7 @@ export default function Hero() {
               <div className="relative bg-white rounded-[3rem] shadow-2xl shadow-pink/20 overflow-hidden border border-pink/10">
                 <div className="relative aspect-[9/16]">
                   <img
-                    src="/hero-profile.jpg"
+                    src="/smuffys-logo.jpg"
                     alt="Smuffy's Pub"
                     className="absolute inset-0 w-full h-full object-cover"
                   />
