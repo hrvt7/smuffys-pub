@@ -6,6 +6,7 @@ import { Menu as MenuIcon, X, Phone } from "lucide-react";
 const nav = [
   { href: "#menu", label: "Menü" },
   { href: "#about", label: "Rólunk" },
+  { href: "#prices", label: "Étlap" },
   { href: "#hours", label: "Nyitvatartás" },
   { href: "#contact", label: "Kapcsolat" },
 ];
