@@ -75,7 +75,7 @@ function Card({ item, mobile }: { item: Item; mobile?: boolean }) {
     <article
       className={`group relative bg-white rounded-3xl border border-zinc-100 overflow-hidden flex flex-col transition-all ${
         mobile
-          ? "shadow-sm shrink-0 w-[75vw] max-w-[320px] snap-start"
+          ? "shadow-sm shrink-0 w-[75vw] max-w-[320px] snap-center"
           : "hover:border-pink/30 hover:shadow-xl hover:shadow-pink/10"
       }`}
     >
@@ -140,12 +140,11 @@ export default function Menu() {
                 <div className="mt-4 h-1 w-20 brand-gradient rounded-full" />
               </div>
 
-              {/* Mobile horizontal scroll */}
-              <div className="sm:hidden -mx-4 px-4 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {/* Mobile horizontal scroll — centered snap */}
+              <div className="sm:hidden -mx-4 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scroll-smooth px-[12.5vw] [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {cat.items.map((item) => (
                   <Card key={item.name + "-m"} item={item} mobile />
                 ))}
-                <div className="shrink-0 w-1" aria-hidden />
               </div>
 
               {/* Desktop grid */}
